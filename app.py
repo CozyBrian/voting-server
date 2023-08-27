@@ -19,5 +19,5 @@ def create_app():
 
     return app
 
-if "name" == "app":
-    create_app()
+# if "name" == "app":
+app = create_app()

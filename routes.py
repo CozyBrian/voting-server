@@ -17,7 +17,7 @@ client = Client(account_sid, auth_token)
 def index():
     users = User.query.all()
     users_list_html = [
-        f"<li>{user.username}, {user.dob}, {user.gender}, {user.number}, {user.classOfUser}, {user.voted}</li>" 
+        f"<li>{user.username}, {user.dob}, {user.gender}, {user.number}, {user.classOfUser}</li>" 
         for user in users
     ]
     return f"<ul>{''.join(users_list_html)}</ul>"
