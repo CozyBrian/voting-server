@@ -214,7 +214,7 @@ def create_candidate():
     role_id = request.json.get('role_id')
     candidate = request.json.get('candidate')
 
-    if not role or not candidate:
+    if not role_id or not candidate:
         return jsonify({"error": "Role and candidate fields are required"}), 400
 
     role = Role.query.filter_by(id=role_id).first()
